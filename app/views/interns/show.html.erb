@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @intern.title %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @intern.context %>
+</p>
+
+<%= link_to 'Edit', edit_intern_path(@intern) %> |
+<%= link_to 'Back', interns_path %>
