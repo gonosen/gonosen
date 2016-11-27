@@ -4,10 +4,9 @@
   <title>Gonosen</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track' => false %>
-  <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'bootstrap.min', 'data-turbolinks-track' => false %>
-
+  <%= stylesheet_link_tag    "bootstrap.min" %>
+  <%= javascript_include_tag "bootstrap.min" %>
   <%= csrf_meta_tags %>
 
     <meta charset="utf-8">
@@ -23,7 +22,6 @@
     <header>
         <nav>
             <% if admin_signed_in? %>
-                <strong><%= link_to current_admin.adminname, pages_show_path %></strong>
                 <%= link_to 'プロフィール変更', edit_admin_registration_path %>
                 <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %>
             <% else %>

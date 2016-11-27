@@ -17,12 +17,6 @@
       </div>
     </div>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-bottom">
-        <CENTER>
-        Copyright © 防人PJ.All Rights Reserved
-       </CENTER>
-    </div>
 
   <div id="headerwrap">
     <div class="container">
@@ -31,8 +25,7 @@
           <h2>Log in</h2>
           <h1>What events<br/>
           do you have?</h1>
-          <form class="form-inline" role="form">
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name),class: "form-inline") do |f| %>
               <%= devise_error_messages! %>
               <div class="field">
                 <div class="form-group">
@@ -55,20 +48,16 @@
                 <!--button type="submit" class="btn btn-warning btn-lg">Invite Me!</button-->
                 <%= f.submit "Log in" ,class:"btn btn-warning btn-lg"%>
               </div>
-            <% end %>
-          </form>         
+            <% end %>       
         </div><!-- /col-lg-6 -->
         
       </div><!-- /row -->
     </div><!-- /container -->
   </div><!-- /headerwrap -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-
-
-
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <CENTER>
+        Copyright © 防人PJ.All Rights Reserved
+       </CENTER>
+    </div>
