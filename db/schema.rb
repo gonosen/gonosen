@@ -38,8 +38,9 @@ ActiveRecord::Schema.define(version: 20161123081031) do
     t.datetime "end_time"
     t.string   "location"
     t.string   "owner"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "intern_type"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

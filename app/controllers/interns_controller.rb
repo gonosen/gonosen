@@ -5,6 +5,7 @@ class InternsController < ApplicationController
   # GET /interns.json
   def index
     @interns = Intern.all
+    #@intern_short = 
   end
 
   # GET /interns/1
@@ -69,6 +70,6 @@ class InternsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def intern_params
-      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner)
+      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:intern_type)
     end
 end
