@@ -28,8 +28,13 @@
 
 <br>
 
-<%= month_calendar(attribute: :starts_at)  do |date,interns| %>
+<%= month_calendar events: @interns do |date,interns| %>
   <%= date.day %>
+    <% interns.each do |intern| %>
+    <div>
+      <%= link_to intern.title, intern %>
+    </div>
+  <% end %>
 <% end %>
 
 
