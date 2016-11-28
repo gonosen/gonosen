@@ -28,7 +28,7 @@
 
 <br>
 
-<%= month_calendar events: @interns do |date,interns| %>
+<%= month_calendar events: @interns , class: "simple-calendar" do |date,interns| %>
   <%= date.day %>
     <% interns.each do |intern| %>
     <div>

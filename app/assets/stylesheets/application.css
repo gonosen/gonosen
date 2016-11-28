@@ -13,4 +13,6 @@
  *= require_tree .
  *= require_self
  *= require_ladda-themeless
+*= require simple_calendar
+ 
  */
