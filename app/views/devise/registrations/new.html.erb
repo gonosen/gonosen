@@ -1,0 +1,63 @@
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><b>ごのせん</b></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <%= render "devise/shared/links" %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div id="headerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>Sign up</h2>
+        <h1>Let students announce <br/>
+        your company interns.</h1>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name),class: "form-inline") do |f| %>
+            <%= devise_error_messages! %>
+            <div class="field">
+              <div class="form-group">
+                <%= f.email_field :email, autofocus: true,class: "form-control" ,placeholder: "Enter your email address" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <% if @minimum_password_length %>
+              <%= f.password_field :password, autocomplete: "off",class: "form-control" ,placeholder: "Enter your password (#{ @minimum_password_length }characters minimum)"  %>
+              <% else %>
+              <%= f.password_field :password, autocomplete: "off",class: "form-control" ,placeholder: "Enter your password"  %>
+              <% end %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password_confirmation, autocomplete: "off" ,class: "form-control" ,placeholder: "Confirm your password" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Sign up" ,class:"btn btn-warning btn-lg"%>
+            </div>
+          <% end %>       
+      </div><!-- /col-lg-6 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div><!-- /headerwrap -->
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <CENTER>
+    Copyright © 防人PJ.All Rights Reserved
+   </CENTER>
+</div>
