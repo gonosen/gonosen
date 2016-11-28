@@ -24,6 +24,13 @@
   </tbody>
 </table>
 
+
+
 <br>
+
+<%= month_calendar(attribute: :starts_at)  do |date,interns| %>
+  <%= date.day %>
+<% end %>
+
 
 <%= link_to 'New Intern', new_intern_path %>
