@@ -39,8 +39,13 @@
     <%= f.label :intern_type %><br>
     <%= f.select :intern_type ,{"その他"=>0,"短期インターン"=>1,"イベント"=>2,"説明会"=>3}%>
   </div>
+  <%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg" ) %>
+
   <div class="field">
+    <%= f.label :company_image %>
     <%= f.attachment_field :company_image %>
+    <%= f.check_box :remove_company_image %>
+    <%= f.label :remove_company_image %>
   </div>
 
 
