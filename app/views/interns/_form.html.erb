@@ -20,12 +20,12 @@
     <%= f.text_area :context %>
   </div>
   <div class="field">
-    <%= f.label :start_time %><br>
-    <%= f.datetime_select :start_time %>
+    <%= f.label :starting_time %><br>
+    <%= f.datetime_select :starting_time %>
   </div>
   <div class="field">
-    <%= f.label :end_time %><br>
-    <%= f.datetime_select :end_time %>
+    <%= f.label :ending_time %><br>
+    <%= f.datetime_select :ending_time %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
@@ -39,6 +39,11 @@
     <%= f.label :intern_type %><br>
     <%= f.select :intern_type ,{"その他"=>0,"短期インターン"=>1,"イベント"=>2,"説明会"=>3}%>
   </div>
+  <div class="field">
+    <%= f.attachment_field :company_image %>
+  </div>
+
+
 
   <div class="actions">
     <%= f.submit %>

@@ -34,9 +34,13 @@ ActiveRecord::Schema.define(version: 20161204201758) do
   create_table "interns", force: :cascade do |t|
     t.string   "title"
     t.text     "context"
+    t.datetime "starting_time"
+    t.datetime "ending_time"
+    t.string   "location"
+    t.string   "owner"
+    t.integer  "intern_type"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "company_image"
     t.string   "company_image_id"
   end
 

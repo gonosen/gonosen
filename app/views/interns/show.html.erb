@@ -10,5 +10,7 @@
   <%= @intern.context %>
 </p>
 
+<%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg") %>
+
 <%= link_to 'Edit', edit_intern_path(@intern) %> |
 <%= link_to 'Back', interns_path %>
