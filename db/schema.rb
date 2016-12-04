@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20161204201758) do
   create_table "interns", force: :cascade do |t|
     t.string   "title"
     t.text     "context"
-    t.datetime "starting_time"
-    t.datetime "ending_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string   "location"
     t.string   "owner"
     t.integer  "intern_type"
