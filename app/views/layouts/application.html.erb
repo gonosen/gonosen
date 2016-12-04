@@ -25,9 +25,11 @@
   <div class="container">
   <CENTER>
   <table width="100%">
-  <th><h2><a href="#">Home</a></h2></th>
-  <th><h2><a href="#">Intern</a></h2></th>
-  <th><h2><a href="#">Information</a></h2></th>
+  <th>
+    <td><h2><%= link_to "Home",interns_path %></h2></td>
+    <td><h2><%= link_to "インターン",overview_interns_path %></h2></td>
+    <td><h2><%= link_to "就活情報",information_interns_path %></h2></td>
+  </th>
   </table>
 </CENTER>
   </div>

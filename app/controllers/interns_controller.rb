@@ -62,6 +62,12 @@ class InternsController < ApplicationController
     end
   end
 
+  def overview
+  end
+
+  def information
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_intern

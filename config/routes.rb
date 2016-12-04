@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admins
   root 'interns#index'
-  resources :interns
+  resources :interns do
+    collection do
+      get 'overview'
+      get 'information'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
