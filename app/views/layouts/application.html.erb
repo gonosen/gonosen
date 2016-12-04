@@ -4,6 +4,7 @@
   <title>Gonosen</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track' => false %>
+  <%= stylesheet_link_tag    'simple-calendar', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    "bootstrap.min" %>
   <%= javascript_include_tag "bootstrap.min" %>
@@ -20,19 +21,29 @@
 </head>
 <body>
     <header>
-        <nav>
-            <% if admin_signed_in? %>
-                <%= link_to 'プロフィール変更', edit_admin_registration_path %>
-                <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %>
-            <% else %>
-                <%= link_to 'サインアップ', new_admin_registration_path %>
-                <%= link_to 'ログイン', new_admin_session_path %>
-            <% end %>
-        </nav>
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+  <CENTER>
+  <table width="100%">
+  <th>
+    <td><h2><%= link_to "Home",interns_path %></h2></td>
+    <td><h2><%= link_to "インターン",overview_interns_path %></h2></td>
+    <td><h2><%= link_to "就活情報",information_interns_path %></h2></td>
+  </th>
+  </table>
+</CENTER>
+  </div>
+</nav>        
     </header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 <%= yield %>
-
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <CENTER>
+    Copyright ⓒ 防人PJ.All Rights Reserved
+  </CENTER>
+  </div>
+</nav>
 </body>
 </html>
