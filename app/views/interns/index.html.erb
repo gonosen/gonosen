@@ -1,3 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 cover-img" style="background-image:url('https://manablog.org/wp-content/uploads/2016/11/top-img.jpg');-moz-background-size:cover;
+background-size:cover;">
+      <div class="cover-text text-center">
+      <p style="height: 200px;"></p>
+      <%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg" ),:class=>'img-thumbnail' %>
+      
+        <h1 style="color: #fff;">ごのせん</h1>
+        <h2 style="color: #fff;">〜九州の学生のための就活情報まとめサイト〜</h2>
+
+
+        <p style="height: 200px;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h1><CENTER>イベントカレンダー</CENTER></h1>
 <div>
   <ul class="nav nav-tabs" role="tablist">
@@ -30,7 +48,7 @@
 
     </div>
     <div class="tab-pane" id="tab_b" role="tabpanel">
-      <%= month_calendar events: @interns , class: "simple-calendar" do |date,interns| %>
+      <%= month_calendar events: @interns.where(intern_type: 1) , class: "simple-calendar" do |date,interns| %>
         <%= date.day %>
           <% interns.each do |intern| %>
           <div>
@@ -40,7 +58,7 @@
       <% end %>
     </div>
     <div class="tab-pane" id="tab_c" role="tabpanel">
-      <%= month_calendar events: @interns , class: "simple-calendar" do |date,interns| %>
+      <%= month_calendar events: @interns.where(intern_type: 2)  , class: "simple-calendar" do |date,interns| %>
         <%= date.day %>
           <% interns.each do |intern| %>
           <div>
@@ -50,7 +68,7 @@
       <% end %>
     </div>
     <div class="tab-pane" id="tab_d" role="tabpanel">
-      <%= month_calendar events: @interns , class: "simple-calendar" do |date,interns| %>
+      <%= month_calendar events: @interns.where(intern_type: 3)  , class: "simple-calendar" do |date,interns| %>
         <%= date.day %>
           <% interns.each do |intern| %>
           <div>
