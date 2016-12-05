@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20161204201758) do
     t.string   "location"
     t.string   "owner"
     t.integer  "intern_type"
+    t.integer  "intern_span"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "company_image_id"

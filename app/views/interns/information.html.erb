@@ -1,1 +1,28 @@
-information
+<p id="notice"><%= notice %></p>
+
+<h2><CENTER>インターンシップ一覧</CENTER></h2>
+
+<table width="100%">
+<th width=25%></th><th width=25%></th><th width=25%></th>
+<% (@interns.count/3+1).times do |i|%>
+<tr >
+<% @interns.slice(3*i,3).each do |intern|%>
+  <td class="table_link" height="20">
+  
+  
+  <%=link_to  intern_path(intern),:style=>"text-decoration: none;" do %>
+    
+    
+    <p><%= intern.title%></p>
+     <div class="col-md-1">
+      <a class="thumbnail">
+       <%= image_tag attachment_url(intern, :company_image, :fill, 200, 150, format: "jpg" ) %>
+      </a>  
+    </div>
+  <%end%>
+  </td>
+<%end%>
+</tr>
+<%end%>
+
+</table>

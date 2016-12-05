@@ -8,6 +8,7 @@ class CreateInterns < ActiveRecord::Migration
       t.string :location
       t.string :owner
       t.integer :intern_type
+      t.integer :intern_span
 
       t.timestamps null: false
     end
