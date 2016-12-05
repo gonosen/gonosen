@@ -36,9 +36,35 @@
     <%= f.text_field :owner %>
   </div>
   <div class="field">
-    <%= f.label :intern_type %><br>
-    <%= f.select :intern_type ,{"その他"=>0,"短期インターン"=>1,"イベント"=>2,"説明会"=>3}%>
+    <%= f.label :timeschedule %><br>
+    <%= f.text_area :timeschedule %>
   </div>
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.text_area :deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :baggage %><br>
+    <%= f.text_area :baggage %>
+  </div>
+  <div class="field">
+    <%= f.label :intern_type %><br>
+    <%= f.select :intern_type ,{"その他"=>0,"インターン"=>1,"イベント"=>2,"説明会"=>3}%>
+  </div>
+  <div class="field">
+    <%= f.label :intern_span %><br>
+    <%= f.select :intern_span ,{"その他"=>0,"短期インターン"=>1,"長期インターン"=>2}%>
+  </div>
+  <%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg" ) %>
+
+  <div class="field">
+    <%= f.label :company_image %>
+    <%= f.attachment_field :company_image %>
+    <%= f.check_box :remove_company_image %>
+    <%= f.label :remove_company_image %>
+  </div>
+
+
 
   <div class="actions">
     <%= f.submit %>

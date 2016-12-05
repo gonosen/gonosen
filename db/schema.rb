@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161123081031) do
+ActiveRecord::Schema.define(version: 20161204201758) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,8 +34,18 @@ ActiveRecord::Schema.define(version: 20161123081031) do
   create_table "interns", force: :cascade do |t|
     t.string   "title"
     t.text     "context"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "location"
+    t.string   "owner"
+    t.text     "timeschedule"
+    t.text     "deadline"
+    t.text     "baggage"
+    t.integer  "intern_type"
+    t.integer  "intern_span"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "company_image_id"
   end
 
 end

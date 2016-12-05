@@ -1,14 +1,70 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 cover-img" style="background-image:url('https://manablog.org/wp-content/uploads/2016/11/top-img.jpg');-moz-background-size:cover;
+background-size:cover;">
+			<div class="cover-text text-center">
+			<p style="height: 150px;"></p>
+			<%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg" ),:class=>'img-thumbnail' %>
+			
+				<h1 style="color: #fff;"><%= @intern.title %></h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @intern.title %>
-</p>
+				<p style="height: 100px;"></p>
+			</div>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Context:</strong>
-  <%= @intern.context %>
-</p>
 
-<%= link_to 'Edit', edit_intern_path(@intern) %> |
-<%= link_to 'Back', interns_path %>
+    <div class="container">
+
+
+      <div class="row text-center">
+        <div class="col-md-12">
+        <p style="height: 100px;"></p>
+          <h2>内容</h2>
+                  <p style="height: 50px;"></p>
+          <h4><%= @intern.context %></h4>
+
+        </div>
+        <p style="height: 100px;"></p>
+                  <h2>詳細</h2>
+                  <p style="height: 50px;"></p>
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th scope="row" width="20%">日時</th>
+      <td class="text-left">
+      
+      <%= @intern.start_time.strftime("%Y年 %m月 %d日")%>
+      <%if @intern.start_time.to_date!=@intern.end_time.to_date then%>
+      <%= @intern.end_time.strftime("〜%Y年 %m月 %d日")%>
+      <%end%>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">場所</th>
+      <td class="text-left"><%= @intern.location%></td>
+    </tr>
+    <tr>
+      <th scope="row">タイムスケジュール</th>
+      <td class="text-left"><%= @intern.timeschedule%></td>
+    </tr>
+    <tr>
+      <th scope="row">応募方法・締め切り</th>
+      <td class="text-left"><%= @intern.deadline%></td>
+    </tr>   
+    <tr>
+      <th scope="row">持ち物・服装</th>
+      <td class="text-left"><%= @intern.baggage%></td>
+    </tr>   
+    <tr>
+      <th scope="row">主催</th>
+      <td class="text-left"><%= @intern.owner%></td>
+    </tr>   
+
+  </tbody>
+</table>
+
+
+
+    </div> <!-- /container -->

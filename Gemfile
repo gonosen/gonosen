@@ -13,6 +13,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem "simple_calendar", "~> 2.0"
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+
 #gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
 #gem 'twitter-bootstrap-rails' # Bootstrapの本体
 #gem 'sprockets', '3.6.3'

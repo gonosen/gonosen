@@ -63,9 +63,11 @@ class InternsController < ApplicationController
   end
 
   def overview
+    @interns = Intern.where(intern_type: 1)
   end
 
   def information
+    @interns = Intern.where.not(intern_type: 1)
   end
 
   private
@@ -76,6 +78,6 @@ class InternsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def intern_params
-      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:intern_type)
+      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:timeschedule,:deadline,:baggage,:intern_type,:intern_span, :company_image,:remove_company_image)
     end
 end

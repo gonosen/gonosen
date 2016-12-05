@@ -1,1 +1,25 @@
-information
+<p id="notice"><%= notice %></p>
+
+<h2><CENTER>就職情報</CENTER></h2>
+<div class="container">
+<div class="row">
+  <% @interns.each do |intern|%>
+    <div class="col-xs-6 col-md-3">
+      <div class="card">
+
+         <div class="card-block">     
+                <%=link_to  intern_path(intern) do %>
+
+        <%=image_tag attachment_url(intern, :company_image, :fill, 250, 150, fallback: "default.png", format: "jpg"), :size => "250x150",:class=>"card-img-top",:alt=>"Card image cap" %>  
+
+          <%end%>
+
+
+          <h4 class="card-title"><%= intern.title%></h4>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>
+</div>
+
