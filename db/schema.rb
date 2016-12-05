@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(version: 20161204201758) do
     t.datetime "end_time"
     t.string   "location"
     t.string   "owner"
+    t.text     "timeschedule"
+    t.text     "deadline"
+    t.text     "baggage"
     t.integer  "intern_type"
     t.integer  "intern_span"
     t.datetime "created_at",       null: false

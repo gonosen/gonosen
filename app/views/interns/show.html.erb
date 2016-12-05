@@ -33,27 +33,33 @@ background-size:cover;">
   <tbody>
     <tr>
       <th scope="row" width="20%">日時</th>
-      <td class="text-left">Mark</td>
+      <td class="text-left">
+      
+      <%= @intern.start_time.strftime("%Y年 %m月 %d日")%>
+      <%if @intern.start_time.to_date!=@intern.end_time.to_date then%>
+      <%= @intern.end_time.strftime("〜%Y年 %m月 %d日")%>
+      <%end%>
+      </td>
     </tr>
     <tr>
       <th scope="row">場所</th>
-      <td class="text-left">Jacob</td>
+      <td class="text-left"><%= @intern.location%></td>
     </tr>
     <tr>
-      <th scope="row">時間</th>
-      <td class="text-left">Larry</td>
+      <th scope="row">タイムスケジュール</th>
+      <td class="text-left"><%= @intern.timeschedule%></td>
     </tr>
     <tr>
       <th scope="row">応募方法・締め切り</th>
-      <td class="text-left">Larry</td>
+      <td class="text-left"><%= @intern.deadline%></td>
     </tr>   
     <tr>
       <th scope="row">持ち物・服装</th>
-      <td class="text-left">Larry</td>
+      <td class="text-left"><%= @intern.baggage%></td>
     </tr>   
     <tr>
       <th scope="row">主催</th>
-      <td class="text-left">Larry</td>
+      <td class="text-left"><%= @intern.owner%></td>
     </tr>   
 
   </tbody>

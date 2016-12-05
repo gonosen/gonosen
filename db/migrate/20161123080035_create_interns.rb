@@ -7,6 +7,9 @@ class CreateInterns < ActiveRecord::Migration
       t.datetime :end_time
       t.string :location
       t.string :owner
+      t.text :timeschedule
+      t.text :deadline
+      t.text :baggage
       t.integer :intern_type
       t.integer :intern_span
 
