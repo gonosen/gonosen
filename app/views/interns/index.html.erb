@@ -1,22 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h2><CENTER>インターンシップ一覧</CENTER></h2>
-
-<table>
-  <tbody>
-    <% @interns.each do |intern| %>
-      <tr>
-        <td><%= intern.title %></td>
-        <td><%= intern.context %></td>
-        <td><%= link_to 'Show', intern %></td>
-        <td><%= link_to 'Edit', edit_intern_path(intern) %></td>
-        <td><%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
+<h1>イベントカレンダー</h1>
 <div>
   <ul class="nav nav-tabs" role="tablist">
     <li class="active" role="presentation">
@@ -41,6 +23,8 @@
           <div>
             <%= link_to intern.title, intern %>
           </div>
+          <%= link_to 'Edit', edit_intern_path(intern),:class=>"btn btn-warning" %>
+          <%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger"%>
         <% end %>
       <% end %>
 

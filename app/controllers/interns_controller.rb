@@ -78,6 +78,6 @@ class InternsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def intern_params
-      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:intern_type, :company_image,:remove_company_image)
+      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:intern_type,:intern_span, :company_image,:remove_company_image)
     end
 end
