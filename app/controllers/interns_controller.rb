@@ -63,9 +63,11 @@ class InternsController < ApplicationController
   end
 
   def overview
+    @interns = Intern.all
   end
 
   def information
+    @interns = Intern.all
   end
 
   private
