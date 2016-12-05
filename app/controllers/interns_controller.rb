@@ -63,11 +63,11 @@ class InternsController < ApplicationController
   end
 
   def overview
-    @interns = Intern.all
+    @interns = Intern.where(intern_type: 1)
   end
 
   def information
-    @interns = Intern.all
+    @interns = Intern.where.not(intern_type: 1)
   end
 
   private
