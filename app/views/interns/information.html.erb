@@ -3,12 +3,22 @@
 <h2><CENTER>就職情報</CENTER></h2>
 <div class="container">
 <div class="row">
+
+<% @tags.each do |tag|%>
+    <div class="col-xs-2 col-md-2 text-center">
+          <%= link_to  :controller => "interns", :action => "information",:tag => tag.name do%>
+            <button class="btn btn-info"><%=tag.name%></button>
+          <% end %>
+    </div>
+<%end%>
+<p style="height: 80px;"></p>
   <% @interns.each do |intern|%>
     <div class="col-xs-6 col-md-3">
       <div class="card">
 
          <div class="card-block">     
                 <%=link_to  intern_path(intern) do %>
+
 
         <%=image_tag attachment_url(intern, :company_image, :fill, 250, 150, fallback: "default.png", format: "jpg"), :size => "250x150",:class=>"card-img-top",:alt=>"Card image cap" %>  
 
