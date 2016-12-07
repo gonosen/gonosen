@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Admin.find_or_create_by(id: 1) do |admin|
+  admin.email = 'admin@example.com'
+  admin.password = 'hogehoge'
+end
+
 interns = Intern.create([
  {  title: 'SunBridge Global Ventures Inc.',
     context: 'A global startup accelerator based in Tokyo, Osaka and Silicon Valley. Conducting a global pitch event "Innovation Weekend" and has invested in global startups such as Peatix, Material Wrld, WHILL, AnyRoad, midokura, Language Cloud, Ginzamarkets, etc.',
