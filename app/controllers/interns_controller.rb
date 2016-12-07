@@ -1,6 +1,6 @@
 class InternsController < ApplicationController
   before_action :set_intern, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_admin!, only: [:new, :edit, :update, :destroy]
   # GET /interns
   # GET /interns.json
   def index

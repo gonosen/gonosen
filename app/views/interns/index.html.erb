@@ -41,8 +41,10 @@ background-size:cover;">
           <div>
             <%= link_to intern.title, intern %>
           </div>
-          <%= link_to 'Edit', edit_intern_path(intern),:class=>"btn btn-warning" %>
-          <%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger"%>
+          <% if admin_signed_in?%>
+            <%= link_to 'Edit', edit_intern_path(intern),:class=>"btn btn-warning" %>
+            <%= link_to 'Destroy', intern, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn btn-danger"%>
+          <% end %>
         <% end %>
       <% end %>
 
@@ -81,5 +83,6 @@ background-size:cover;">
 </div>
 <br>
 
-
-<%= link_to 'New Intern', new_intern_path %>
+<% if admin_signed_in? %>
+  <%= link_to 'New Intern', new_intern_path %>
+<% end %>
