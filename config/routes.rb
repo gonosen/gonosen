@@ -12,7 +12,4 @@ Rails.application.routes.draw do
       get 'information'
     end
   end
-
-  match "*path" => "application#handle_404", via: :all
-
 end

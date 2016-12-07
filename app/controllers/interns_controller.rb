@@ -67,7 +67,16 @@ class InternsController < ApplicationController
   end
 
   def information
+    @tags = ActsAsTaggableOn::Tag.most_used(6)
     @interns = Intern.where.not(intern_type: 1)
+    
+    if params[:tag].blank? then
+    else
+      @interns = @interns.tagged_with(params[:tag])
+    end
+
+    
+    
   end
 
   private
@@ -78,6 +87,6 @@ class InternsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def intern_params
-      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:timeschedule,:deadline,:baggage,:intern_type,:intern_span, :company_image,:remove_company_image)
+      params.require(:intern).permit(:title, :context, :start_time, :end_time, :location, :owner,:timeschedule,:deadline,:baggage,:intern_type,:intern_span, :company_image,:remove_company_image, :tag_list)
     end
 end
