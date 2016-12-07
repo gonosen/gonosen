@@ -5,13 +5,13 @@
 <div class="row">
 
 <% @tags.each do |tag|%>
-    <div class="col-xs-3 col-md-2 text-center">
+    <div class="col-xs-2 col-md-2 text-center">
           <%= link_to  :controller => "interns", :action => "information",:tag => tag.name do%>
             <button class="btn btn-info"><%=tag.name%></button>
           <% end %>
     </div>
 <%end%>
-<p style="height: 40px;"></p>
+<p style="height: 80px;"></p>
   <% @interns.each do |intern|%>
     <div class="col-xs-6 col-md-3">
       <div class="card">
