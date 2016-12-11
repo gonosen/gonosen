@@ -1,0 +1,11 @@
+/home/ohira/.rbenv/versions/2.2.2/bin/ruby -r ./siteconf20161212-21101-69dzyt.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20161212-21101-1is3x0i
