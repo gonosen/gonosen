@@ -16,9 +16,7 @@ gem "simple_calendar", "~> 2.0"
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'acts-as-taggable-on', '~> 3.4'
-#gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
-#gem 'twitter-bootstrap-rails' # Bootstrapの本体
-#gem 'sprockets', '3.6.3'
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug'
