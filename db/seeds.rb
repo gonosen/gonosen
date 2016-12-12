@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 Admin.find_or_create_by(id: 1) do |admin|
   admin.email = 'admin@example.com'
   admin.password = 'hogehoge'
@@ -18,6 +10,11 @@ interns = Intern.create([
     end_time: Time.mktime(2016, 12, 25, 00, 00, 00),
     location: "大阪府豊中市蛍池",
     owner: "大阪大学rails有志の会",
+    timeschedule: "11時から15時まで",
+    deadline: "2016/12/31",
+    baggage: "PCのみ",
+    intern_type: 1,
+    intern_span: 1,
 
     },
 
@@ -25,7 +22,13 @@ interns = Intern.create([
  	context: '本学は、一定以上の実務経験をもつ社会人を対象としたMBAプログラムを中心として、多くの社会人の皆様が、今以上に理論的、実践的にビジネスのセンスを磨き、海外との接点を有効に活用できるスキルを高める機会を提供します。受講生には、これまでの経験、知識にとどまらず、さらにそれらを深化させるために、能動的に知識を習得する姿勢、知識を実務に適用して検証するための高い問題意識、継続的な学習を支える目的意識を持ち、国際社会へ挑戦すべく自らを絶えず成長させていくことを期待します。',
     start_time: Time.mktime(2016, 12, 14, 00, 00, 00),
     end_time: Time.mktime(2016, 12, 15, 00, 00, 00),
-
+    location: "大阪府豊中市蛍池",
+    owner: "大阪大学rails有志の会",
+    timeschedule: "11時から15時まで",
+    deadline: "2016/12/31",
+    baggage: "PCのみ",
+    intern_type: 0,
+    intern_span: 0,
  },
 
  {  title: '【大阪・西中島】類キャリア塾presents　秋の1DAYインターンシップ',
@@ -60,7 +63,11 @@ interns = Intern.create([
     end_time: Time.mktime(2016, 11, 25, 00, 00, 00),
     location: "大阪府豊中市蛍池",
     owner: "大阪大学rails有志の会",
-
+    timeschedule: "11時から15時まで",
+    deadline: "2016/12/31",
+    baggage: "PCのみ",
+    intern_type: 0,
+    intern_span: 0,
     },
 
  {  title: '【本町】業界Labo 株式会社オークワ' ,
@@ -88,7 +95,13 @@ interns = Intern.create([
 今後の就職活動、そして社会に出てからの社会人人生にフル活用できるセミナーです。',
     start_time: Time.mktime(2016, 12, 4, 00, 00, 00),
     end_time: Time.mktime(2016, 12, 6, 00, 00, 00),
-
+    location: "大阪府豊中市蛍池",
+    owner: "大阪大学rails有志の会",
+    timeschedule: "11時から15時まで",
+    deadline: "2016/12/31",
+    baggage: "PCのみ",
+    intern_type: 2,
+    intern_span: 0,
  }
 
 
