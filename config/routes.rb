@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get 'statics_view/index'
+
   devise_for :admins
     as :admin do
     get 'admins/edit' => 'devise/registrations#edit', :as => 'edit_admin_registration'
