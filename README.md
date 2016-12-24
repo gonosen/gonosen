@@ -53,22 +53,25 @@ $ gem install bundler
 ### 1. ソースの取得
 
 SSH:
-`git@github.com:gonosen/gonosen.git`
+$ git clone git@github.com:gonosen/gonosen.git
 
 HTTPS:
 `https://github.com/gonosen/gonosen`
 
 ### 2. セットアップ
 ```
-cd gonosen
-bundle install
-bundle exec rake db:migrate
-bundle exec rake db:seed
+$ cd gonosen
+
+$ bundle install
+
+$ bundle exec rake db:migrate
+
+$ bundle exec rake db:seed
 ```
 
 ### 3. サーバーの立ち上げ
 ```
-bundle exec rails server
+$ bundle exec rails server
 ```
 
 ### 4. サイトへのアクセス（ローカル）
@@ -78,6 +81,60 @@ localhost:3000
 
 ### 5. サーバーのシャットダウン
 ctrl + 'c'
+
+
+## 開発の流れ
+### 1. 開発用のブランチに移動
+```
+$ git checkout develop-○○○
+新しくブランチを作る場合は git checkout -b develop-○○○
+
+```
+### 2. 開発コードをプッシュする
+
+```
+$ git add .
+ファイルの削除を行った場合は git add -A
+$ git commit -m "コミットメッセージ"
+(コミットメッセージは簡潔にわかりやすく作業内容を表すもの)
+
+以上を何回か繰り返す
+
+間違ったコードを書いてコミットしてしまった場合は過去のコミットまで巻き戻す必要がある。そのために
+$ git log
+として戻したいコミットのidをコピーする(git log は 'q' で終了)
+git reset --hard コミットID
+
+```
+
+### 3. コミットをgithubにプッシュする
+```
+$ git push origin develop-○○○
+これでgithubのwebサイトから変更が確認できる
+```
+
+### 4. ブランチのマージ
+```
+何回かpushしてこのブランチでの開発が終わった場合はmasterブランチにmargeする。
+
+https://github.com/gonosen/gonosenにアクセス
+
+'pull request'(上のほうのバーにある)
+
+'New pull requesr'(右上の緑のボタン)
+
+'develop-○○○'(真ん中の Example comparisons の中)
+
+'Create pull request'(真ん中左の緑のボタン)
+
+タイトル：ブランチの目的を一言で表す
+コメント：ブランチでやったことを細かく書く
+'Create pull request'(右下の緑のボタン)
+
+後は管理者が
+'Marge pull request を実行する'
+
+```
 
 
 * URL一覧
