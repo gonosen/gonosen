@@ -7,9 +7,9 @@ ruby 2.2.2p95
 
 
 ## railsの開発環境の構築(ubuntu16.04 + rbenv)
-```
-### 1. 周辺ライブラリのインストール
 
+###1. 周辺ライブラリのインストール
+```
 ctrl + alt + 't'でターミナルをたち上げる
 
 $ sudo apt-get install git
@@ -29,9 +29,10 @@ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 $ type rbenv
+```
 
-### 2. rubyのインストール
-
+###2. rubyのインストール
+```
  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 $ rbenv install -l
@@ -44,8 +45,8 @@ $ rbenv global 2.2.2p95
 
 $ gem install bundler
 
-
 ```
+
 
 ## インストール方法
 
