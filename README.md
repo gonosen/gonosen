@@ -91,4 +91,6 @@ ctrl + 'c'
     - new          -> /teachers/new
     - edit         -> /teachers/'internID'/edit
     - show         -> /teachers/'internID'/show
+  * statics_view
+    - index        -> /statics_view/index
 
