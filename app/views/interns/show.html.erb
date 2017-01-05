@@ -4,9 +4,9 @@
 background-size:cover;">
 			<div class="cover-text text-center">
 			<p style="height: 150px;"></p>
-			<%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg" ),:class=>'img-thumbnail' %>
+			<%= image_tag attachment_url(@intern, :company_image, :fill, 300, 300, format: "jpg" ) %>
 			
-				<h1 style="color: #fff;"><%= @intern.title %></h1>
+				<h1 style="color: #fff;"><%= simple_format(@intern.title,:style=>"font-size:30px") %></h1>
 
 				<p style="height: 100px;"></p>
 			</div>
@@ -21,14 +21,13 @@ background-size:cover;">
       <div class="row text-center">
         <div class="col-md-12">
         <p style="height: 100px;"></p>
-          <h2>内容</h2>
-                  <p style="height: 50px;"></p>
-          <h4><%= @intern.context %></h4>
+        <h2>内容</h2>
+        <p style="height: 50px;"></p>
+        <h4><%= auto_link(simple_format(@intern.context)) %></h4>
+        <p style="height: 200px;"></p>
+        <h2>詳細</h2>
+        <p style="height: 50px;"></p>
 
-        </div>
-        <p style="height: 100px;"></p>
-                  <h2>詳細</h2>
-                  <p style="height: 50px;"></p>
 <table class="table table-striped">
   <tbody>
     <tr>
@@ -43,28 +42,28 @@ background-size:cover;">
     </tr>
     <tr>
       <th scope="row">場所</th>
-      <td class="text-left"><%= @intern.location%></td>
+      <td class="text-left"><%= auto_link(simple_format(@intern.location))%></td>
     </tr>
     <tr>
       <th scope="row">タイムスケジュール</th>
-      <td class="text-left"><%= @intern.timeschedule%></td>
+      <td class="text-left"><%= auto_link(simple_format(@intern.timeschedule))%></td>
     </tr>
     <tr>
       <th scope="row">応募方法・締め切り</th>
-      <td class="text-left"><%= @intern.deadline%></td>
+      <td class="text-left"><%= auto_link(simple_format(@intern.deadline))%></td>
     </tr>   
     <tr>
       <th scope="row">持ち物・服装</th>
-      <td class="text-left"><%= @intern.baggage%></td>
+      <td class="text-left"><%= auto_link(simple_format(@intern.baggage))%></td>
     </tr>   
     <tr>
       <th scope="row">主催</th>
-      <td class="text-left"><%= @intern.owner%></td>
+      <td class="text-left"><%= auto_link(simple_format(@intern.owner))%></td>
     </tr>   
 
   </tbody>
 </table>
 
-
+</div>
 
     </div> <!-- /container -->

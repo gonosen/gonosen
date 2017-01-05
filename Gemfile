@@ -17,6 +17,8 @@ gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'unicorn'
+gem 'rack-cache'
+gem 'rails_autolink'
 
 group :development, :test do
   gem 'byebug'
