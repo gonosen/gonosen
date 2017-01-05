@@ -23,7 +23,7 @@ background-size:cover;">
         <p style="height: 100px;"></p>
           <h2>内容</h2>
                   <p style="height: 50px;"></p>
-          <h4><%= @intern.context %></h4>
+          <h4><%= simple_format(@intern.context) %></h4>
 
         </div>
         <p style="height: 100px;"></p>
@@ -43,23 +43,23 @@ background-size:cover;">
     </tr>
     <tr>
       <th scope="row">場所</th>
-      <td class="text-left"><%= @intern.location%></td>
+      <td class="text-left"><%= simple_format(@intern.location)%></td>
     </tr>
     <tr>
       <th scope="row">タイムスケジュール</th>
-      <td class="text-left"><%= @intern.timeschedule%></td>
+      <td class="text-left"><%= simple_format(@intern.timeschedule)%></td>
     </tr>
     <tr>
       <th scope="row">応募方法・締め切り</th>
-      <td class="text-left"><%= @intern.deadline%></td>
+      <td class="text-left"><%= simple_format(@intern.deadline)%></td>
     </tr>   
     <tr>
       <th scope="row">持ち物・服装</th>
-      <td class="text-left"><%= @intern.baggage%></td>
+      <td class="text-left"><%= simple_format(@intern.baggage)%></td>
     </tr>   
     <tr>
       <th scope="row">主催</th>
-      <td class="text-left"><%= @intern.owner%></td>
+      <td class="text-left"><%= simple_format(@intern.owner)%></td>
     </tr>   
 
   </tbody>
