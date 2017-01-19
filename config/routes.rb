@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'inquiry' => 'inquiry#index'
+  post 'inquiry/confirm' => 'inquiry#confirm'
+  post 'inquiry/thanks' => 'inquiry#thanks'
+
   #match "*path" => "application#handle_404", via: :all
   
 end
