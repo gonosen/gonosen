@@ -32,19 +32,19 @@ ActiveRecord::Schema.define(version: 20161207135851) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "interns", force: :cascade do |t|
-    t.string   "title"
-    t.text     "context"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.string   "location"
-    t.string   "owner"
-    t.text     "timeschedule"
-    t.text     "deadline"
-    t.text     "baggage"
-    t.integer  "intern_type"
-    t.integer  "intern_span"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "title",            default: "タイトル", null: false
+    t.text     "context",          default: "本文",   null: false
+    t.datetime "start_time",                        null: false
+    t.datetime "end_time",                          null: false
+    t.string   "location",         default: "特になし", null: false
+    t.string   "owner",            default: "特になし", null: false
+    t.text     "timeschedule",     default: "特になし", null: false
+    t.text     "deadline",         default: "特になし", null: false
+    t.text     "baggage",          default: "特になし", null: false
+    t.integer  "intern_type",      default: 0,      null: false
+    t.integer  "intern_span",      default: 0,      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "company_image_id"
   end
 

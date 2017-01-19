@@ -16,7 +16,11 @@ gem "simple_calendar", "~> 2.0"
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'unicorn-rails'
 gem 'unicorn'
+gem 'rack-cache'
+gem 'rails_autolink'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'byebug'
