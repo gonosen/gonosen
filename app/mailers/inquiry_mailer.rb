@@ -1,6 +1,6 @@
 class InquiryMailer < ActionMailer::Base
-  default from: "example@example.com"   # 送信元アドレス
-  default to: "example@example.com"     # 送信先アドレス
+  default from: "gonosen.ml@gmail.com"   # 送信元アドレス
+  default to: "gonosen.ml@gmail.com"     # 送信先アドレス
  
   def received_email(inquiry)
     @inquiry = inquiry
